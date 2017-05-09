@@ -23,3 +23,6 @@ import 'jquery/dist/jquery.js';
 
 //layer
 import 'layer/layer.js';
+
+//slimscroll
+import 'jquerySlimscroll/jquery.slimscroll.js';

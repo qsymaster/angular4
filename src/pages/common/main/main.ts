@@ -15,6 +15,11 @@ export class MainPage {
         _router = router;
     }
 
+    ngOnInit(){
+        $('#leftPanel').slimScroll({height:'auto',color:'#656565',railOpacity:0.9,wheelStep:10,alwaysVisible: true});
+        $('#rightpanel').slimScroll({height:'auto',color:'#656565',railOpacity:0.9,wheelStep:10,alwaysVisible: true});
+    }
+
     loginOut(){
         layer.confirm('你确定要退出系统？', {
             btn: ['确定','取消'] //按钮
