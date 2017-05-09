@@ -1,0 +1,17 @@
+body {
+    background: url('/assets/images/login_bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: rgb(188, 208, 155);
+}
+
+.panel-default {
+    opacity: 0.9;
+    margin-top:30px;
+}
+
+.form-group.last {
+    margin-bottom:0px;
+}
