@@ -26,3 +26,7 @@ import 'layer/layer.js';
 
 //slimscroll
 import 'jquerySlimscroll/jquery.slimscroll.js';
+
+//metismenu
+import 'metismenu/dist/metisMenu.css';
+import 'metismenu/dist/metisMenu.js';

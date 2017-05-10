@@ -1,24 +1,61 @@
-<div class="mainBg">
-    <!-- 头部导航条 -->
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="navbar-inner">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="javascript:;">斗拍商家平台</a>
-            </div>
-            <ul class="nav navbar-nav navbar-right setting">
-                <li><a href="javascript:;" ><span class="glyphicon glyphicon-user"></span> 设置</a></li>
-                <li><a href="javascript:;" (click)="loginOut()"><span class="glyphicon glyphicon-log-out"></span> 退出</a></li>
-            </ul>
+<!-- 头部导航条 -->
+<nav class="navbar navbar-default navbar-static-top headerNav">
+    <div class="navbar-inner">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="javascript:;">斗拍商家平台</a>
         </div>
-    </nav>
-
-    <!-- 左边菜单 -->
-    <div id="leftPanel">
+        <ul class="nav navbar-nav navbar-right setting">
+            <li><a href="javascript:;" ><span class="glyphicon glyphicon-user"></span> 设置</a></li>
+            <li><a href="javascript:;" (click)="loginOut()"><span class="glyphicon glyphicon-log-out"></span> 退出</a></li>
+        </ul>
     </div>
+</nav>
 
+<!-- 左边菜单 -->
+<aside class="leftPanel">
+    <nav class="menu_dropdown">
+        <dl>
+			<dt><i class="glyphicon glyphicon-fire"></i> 系统统计<i class="glyphicon glyphicon-chevron-down"></i></dt>
+			<dd>
+				<ul>
+					<li><a href="javascript:void(0);" title="折线图">折线图</a></li>
+					<li><a href="javascript:void(0);" title="时间轴折线图">时间轴折线图</a></li>
+					<li><a href="javascript:void(0);" title="区域图">区域图</a></li>
+					<li><a href="javascript:void(0);" title="柱状图">柱状图</a></li>
+					<li><a href="javascript:void(0);" title="饼状图">饼状图</a></li>
+					<li><a href="javascript:void(0);" title="3D柱状图">3D柱状图</a></li>
+					<li><a href="javascript:void(0);" title="3D饼状图">3D饼状图</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt><i class="glyphicon glyphicon-filter"></i> 系统管理<i class="glyphicon glyphicon-chevron-down"></i></dt>
+			<dd>
+				<ul>
+					<li><a href="javascript:void(0);" title="系统设置">系统设置</a></li>
+					<li><a href="javascript:void(0);" title="栏目管理">栏目管理</a></li>
+					<li><a href="javascript:void(0);" title="数据字典">数据字典</a></li>
+					<li><a href="javascript:void(0);" title="屏蔽词">屏蔽词</a></li>
+					<li><a href="javascript:void(0);" title="系统日志">系统日志</a></li>
+				</ul>
+			</dd>
+		</dl>
+    </nav>
+</aside>
 
-    <!-- 右边内容 -->
-    <div id="rightpanel">
+<!-- 隐藏按钮 -->
+<div class="displayArrow">
+    <a href="javascript:void(0);" [class]='linkCls' (click)="displayMenu()"></a>
+</div>
+
+<!-- 右边内容 -->
+<section class="rightpanel">
+    <!-- 显示导航信息 -->
+    <nav class="navTitle">
+
+    </nav>
+    <!-- 工作区域 -->
+    <div class="articleWork">
         dfafasd
         <br/>
         sdafsdfsa
@@ -27,7 +64,4 @@
         <br/>
         sdafsdfsa
     </div>
-
-
-
-</div>
+</section>

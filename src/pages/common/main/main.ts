@@ -10,14 +10,26 @@ let _router: any;
     styleUrls: ['./main.scss']
 })
 export class MainPage {
-
+    linkCls:string='';
     constructor(private router:Router) {
         _router = router;
     }
 
     ngOnInit(){
-        $('#leftPanel').slimScroll({height:'auto',color:'#656565',railOpacity:0.9,wheelStep:10,alwaysVisible: true});
-        $('#rightpanel').slimScroll({height:'auto',color:'#656565',railOpacity:0.9,wheelStep:10,alwaysVisible: true});
+        $("body").removeClass("loginBody");
+        $("#myMenu").metisMenu();
+        // $('#leftPanel').slimScroll({height:'auto',width:'350px',color:'#656565',railOpacity:0.9,wheelStep:10});
+        // $('#rightpanel').slimScroll({height:'auto',color:'#656565',railOpacity:0.9,wheelStep:10,alwaysVisible: true});
+    }
+
+    displayMenu(){
+        if(this.linkCls==='open'){
+            this.linkCls = '';
+            $("body").removeClass("big-page");
+        } else {
+            this.linkCls = 'open';
+            $("body").addClass("big-page");
+        }
     }
 
     loginOut(){

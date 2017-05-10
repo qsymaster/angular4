@@ -19,6 +19,11 @@ export class LoginPage {
 
     }
 
+    ngOnInit(){
+        $("body").addClass("loginBody");
+    }
+
+
     loginIn(){
         if(this.validator()){
             this.router.navigate(['common/main']);
