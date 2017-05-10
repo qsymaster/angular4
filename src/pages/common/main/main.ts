@@ -17,7 +17,7 @@ export class MainPage {
 
     ngOnInit(){
         $("body").removeClass("loginBody");
-        $("#myMenu").metisMenu();
+        $("#menu").metisMenu();
         // $('#leftPanel').slimScroll({height:'auto',width:'350px',color:'#656565',railOpacity:0.9,wheelStep:10});
         // $('#rightpanel').slimScroll({height:'auto',color:'#656565',railOpacity:0.9,wheelStep:10,alwaysVisible: true});
     }

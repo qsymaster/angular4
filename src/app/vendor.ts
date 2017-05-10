@@ -29,4 +29,5 @@ import 'jquerySlimscroll/jquery.slimscroll.js';
 
 //metismenu
 import 'metismenu/dist/metisMenu.css';
+import 'metismenu/dist/mm-vertical.css';
 import 'metismenu/dist/metisMenu.js';
