@@ -58,7 +58,7 @@
 }
 
 .sidebar-nav .metismenu ul a {
-    padding: 10px 15px 10px 30px;
+    padding: 10px 15px 10px 35px;
 }
 
 .sidebar-nav .metismenu ul ul a {
@@ -68,7 +68,7 @@
 .sidebar-nav .metismenu a:hover,
 .sidebar-nav .metismenu a:focus,
 .sidebar-nav .metismenu a:active {
-    color: #000;
+    color: #fff;
     text-decoration: none;
-    background: #fff;
+    background: rgba(31,131,191,1);
 }

@@ -15,25 +15,32 @@
 <aside class="leftPanel">
     <nav class="sidebar-nav">
         <ul class="metismenu" id="menu">
-          <li class="active">
-            <a href="#" aria-expanded="true">Menu 1<span class='glyphicon arrow'></span></a>
-            <ul aria-expanded="true">
-                <li><a href="#">Menu 2</a></li>
-                <li><a href="#">Menu 2</a></li>
-                <li><a href="#">Menu 2</a></li>
-                <li><a href="#">Menu 2</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" aria-expanded="false">Menu 2<span class='glyphicon arrow'></span></a>
-            <ul aria-expanded="false">
-                <li><a href="#">Menu 2</a></li>
-                <li><a href="#">Menu 2</a></li>
-                <li><a href="#">Menu 2</a></li>
-                <li><a href="#">Menu 2</a></li>
-            </ul>
-          </li>
-      </ul>
+            <li class="active">
+                <a href="javascript:void(0);" aria-expanded="true">
+                    <i class="fa fa-desktop"></i>
+                    <span class="sidebar-nav-item">我的桌面</span>
+                    <i class="fa arrow"></i>
+                </a>
+                <ul aria-expanded="true">
+                    <li><a href="javascript:void(0);" routerLink="desktop/home">首页</a></li>
+                    <li><a href="javascript:void(0);" routerLink="desktop/goods">商品管理</a></li>
+                    <li><a href="javascript:void(0);" routerLink="desktop/order">订单管理</a></li>
+                    <li><a href="javascript:void(0);">账单管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0);" aria-expanded="true">
+                    <i class="fa fa-cogs"></i>
+                    <span class="sidebar-nav-item">系统管理</span>
+                    <i class="fa arrow"></i>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="javascript:void(0);">个人信息</a></li>
+                    <li><a href="javascript:void(0);">密码修改</a></li>
+                    <li><a href="javascript:void(0);">参数设置</a></li>
+                </ul>
+            </li>
+        </ul>
     </nav>
 </aside>
 
@@ -50,12 +57,6 @@
     </nav>
     <!-- 工作区域 -->
     <div class="articleWork">
-        dfafasd
-        <br/>
-        sdafsdfsa
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        sdafsdfsa<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <br/>
-        sdafsdfsa
+        <router-outlet></router-outlet>
     </div>
 </section>
