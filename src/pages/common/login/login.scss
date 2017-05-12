@@ -1,6 +1,22 @@
 .panel-default {
     opacity: 0.9;
     margin-top:30px;
+
+    .imgCode{
+        width: 90px;
+        height: 34px;
+        border-radius: 2px;
+        cursor: pointer;
+        position: absolute;
+        z-index: 3;
+        right: 0;
+        top: 0;
+    }
+
+    .inputCode{
+        padding-right: 100px;
+    }
+
 }
 
 .form-group.last {

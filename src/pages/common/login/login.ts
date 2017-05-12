@@ -1,6 +1,9 @@
 import { Component } from "@angular/core";
 import { Router } from '@angular/router';
 
+import {HttpService} from "../../../providers/HttpService";
+import {Utils} from "../../../providers/Utils";
+
 declare var $: any;
 declare var layer: any;
 
@@ -13,10 +16,11 @@ export class LoginPage {
 
     loginName:string;//登录名
     password:string;//密码
-    code:string;//验证码
-
-    constructor(private router:Router) {
-
+    picCode:string;//验证码
+    imgCode:string;//图片验证码
+    key:string;//验证码对应的key
+    constructor(private router:Router,private httpService:HttpService) {
+        this.loadValiCode();//获取验证码图片
     }
 
     ngOnInit(){
@@ -24,10 +28,20 @@ export class LoginPage {
     }
 
 
+    /**
+    * 用户登录
+    */
     loginIn(){
         if(this.validator()){
             this.router.navigate(['common/main']);
         }
+    }
+
+    /*
+    * 获取图片验证码
+    */
+    loadValiCode(){
+        this.httpService.get('/api/common/forgetLoginPic');
     }
 
     //验证表单数据

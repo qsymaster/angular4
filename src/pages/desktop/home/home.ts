@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import {HttpService} from "../../../providers/HttpService";
+import {Utils} from "../../../providers/Utils";
 
 declare var $: any;
 declare var layer: any;
@@ -10,8 +12,8 @@ declare var layer: any;
 })
 export class HomePage {
 
-    constructor() {
-
+    constructor(private httpService:HttpService) {
+        
     }
 
     ngOnInit(){

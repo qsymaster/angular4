@@ -25,7 +25,10 @@
                         <label for="code" class="col-sm-3 control-label">
                             验证码</label>
                         <div class="col-sm-9">
-                            <input type="text" name="code" [(ngModel)]="code" class="form-control" id="code" placeholder="验证码">
+                            <div class="input-group">
+                                <img [src]="imgCode" class="imgCode" (click)="loadValiCode()">
+                                <input class="inputCode"  type="text" name="code" [(ngModel)]="code" class="form-control" id="code" placeholder="验证码">
+                            </div>
                         </div>
                     </div>
                 </form>
