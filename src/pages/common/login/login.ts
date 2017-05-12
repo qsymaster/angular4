@@ -41,7 +41,15 @@ export class LoginPage {
     * 获取图片验证码
     */
     loadValiCode(){
-        this.httpService.get('/api/common/forgetLoginPic');
+        this.httpService.httpGet({
+            url:'/api/common/forgetLoginPic',
+            data:[]
+        }).subscribe((data:any)=>{
+            if(data.code === 200){
+                this.imgCode = data.result.picCode;
+                this.key = data.result.key;
+            }
+        });
     }
 
     //验证表单数据
