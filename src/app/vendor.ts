@@ -14,12 +14,15 @@ import 'rxjs/Subscription';
 import 'rxjs/Subject';
 import 'rxjs/BehaviorSubject';
 
-// Bootsctrap
-import 'bootstrap/dist/css/bootstrap.css';
+// font awesome
 import 'font-awesome/css/font-awesome.css';
 
 //jquery
 import 'jquery/dist/jquery.js';
+
+//bootstrap
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 
 //layer
 import 'layer/layer.js';

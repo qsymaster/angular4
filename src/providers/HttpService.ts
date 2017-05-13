@@ -18,7 +18,7 @@ export class HttpService {
     /**
     * http get 请求
     */
-    public httpGet(options?: any){
+    public get(options?: any){
         let url = Utils.APP_SERVE_URL + options.url;
         let reqData = options.data;
         this.httpHandle.httpBefore(url, reqData);
@@ -36,7 +36,7 @@ export class HttpService {
     /**
     * http post 请求
     */
-    public httpPost(options?: any){
+    public post(options?: any){
         let url = Utils.APP_SERVE_URL + options.url;
         let reqData = options.data;
         this.httpHandle.httpBefore(url, reqData);

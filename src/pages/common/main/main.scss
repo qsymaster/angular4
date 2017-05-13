@@ -1,21 +1,14 @@
-.headerNav{
-    margin-bottom: 0;
-    height: 50px;
-    background: rgba(7,127,184,0.9);
-
-    .navbar-brand,.navbar-nav > li > a{
-        color: #FFF;
-    }
-
-    .setting{
-        padding-right: 10px;
-    }
-
+.userImg{
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    margin: 8px 0 0 100px;
 }
+
 
 .leftPanel{
     position: absolute;
-    top: 50px;
+    top: 52px;
     bottom: 0;
     left: 0;
     padding-top: 10px;
@@ -148,7 +141,7 @@
 
 .rightpanel{
     position: absolute;
-    top: 50px;
+    top: 52px;
     right: 0;
     bottom: 0;
     left: 200px;

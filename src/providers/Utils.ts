@@ -21,6 +21,26 @@ export class Utils {
     }
 
     /**
+    * 保存对象到session
+    */
+    static setObject(key:string,val:any){
+        sessionStorage.setItem(key,JSON.stringify(val));
+    }
+
+    /**
+    * 从session中获取对象
+    */
+    static getObject(key:string){
+        let obj = sessionStorage.getItem(key);
+        console.log(obj+"====================");
+        if(obj){
+            return JSON.parse(obj);
+        }else{
+            return null;
+        }
+    }
+
+    /**
     *  显示加载中
     */
     static showLoading(){
@@ -39,14 +59,6 @@ export class Utils {
     */
     static hideLoading(){
         layer.closeAll('loading');
-    }
-
-    static isEmpty(value:any): boolean {
-        return value == null || typeof value === 'string' && value.length === 0;
-    }
-
-    static isNotEmpty(value:any): boolean {
-        return !Utils.isEmpty(value);
     }
 
     /**
@@ -121,5 +133,41 @@ export class Utils {
       .replace(/s/ig, String(time.Second))
       .replace(/fff/ig, String(time.Millisecond))
   }
+
+    /*======================验证===========================*/
+    /**
+    * 验证字符为空(true:为空|false:不为空)
+    */
+    static isEmpty(value:any): boolean {
+        return value == null || typeof value === 'string' && $.trim(value).length === 0;
+    }
+
+    /**
+    * 验证字符不能为空(true:不为空|false:为空)
+    */
+    static isNotEmpty(value:any): boolean {
+        return !Utils.isEmpty(value);
+    }
+
+    /**
+    * 手机号是否正确(true:正确|false:不正确)
+    */
+    static isMobile(value:any){
+        return (/^1[3|4|5|8][0-9]\d{4,8}$/.test(value));
+    }
+
+    /**
+    * 邮箱是否正确(true:正确|false:不正确)
+    */
+    static isEmail(value:any){
+        return ( /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/.test(value));
+    }
+
+    /**
+    * 验证是否是数字(true:是|false:否)
+    */
+    static isNumber(value:any){
+        return !isNaN(value);
+    }
 
 }

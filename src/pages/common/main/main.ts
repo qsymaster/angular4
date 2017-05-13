@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Router } from '@angular/router';
+import {Utils} from "../../../providers/Utils";
 
 declare var $: any;
 declare var layer: any;
@@ -11,15 +12,24 @@ let _router: any;
 })
 export class MainPage {
     linkCls:string='';
+    userImg:string = "/assets/images/avatar.png";
+    userName:string = '';
     constructor(private router:Router) {
         _router = router;
+        //获取用户信息
+        let userInfo:any = Utils.getObject("userInfo");
+
+        if(userInfo){
+            console.log("============="+JSON.stringify(userInfo));
+            this.userImg = userInfo.headImgUrl;
+            this.userName = userInfo.nickName;
+        }
+
     }
 
     ngOnInit(){
         $("body").removeClass("loginBody");
         $("#menu").metisMenu();
-        // $('#leftPanel').slimScroll({height:'auto',width:'350px',color:'#656565',railOpacity:0.9,wheelStep:10});
-        // $('#rightpanel').slimScroll({height:'auto',color:'#656565',railOpacity:0.9,wheelStep:10,alwaysVisible: true});
     }
 
     displayMenu(){
