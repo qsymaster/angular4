@@ -12,11 +12,12 @@ declare var layer: any;
 })
 export class HomePage {
 
+    showTime:any = new Date();
     constructor(private httpService:HttpService) {
-        
+        this.showTime = new Date();
     }
 
     ngOnInit(){
-
+        
     }
 }

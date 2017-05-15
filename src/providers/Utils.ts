@@ -32,7 +32,6 @@ export class Utils {
     */
     static getObject(key:string){
         let obj = sessionStorage.getItem(key);
-        console.log(obj+"====================");
         if(obj){
             return JSON.parse(obj);
         }else{

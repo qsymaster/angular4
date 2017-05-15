@@ -14,13 +14,15 @@ export class MainPage {
     linkCls:string='';
     userImg:string = "/assets/images/avatar.png";
     userName:string = '';
+    menuParent = "我的桌面";
+    menuName = "首页";
+    refreshLink ='desktop/home';
     constructor(private router:Router) {
         _router = router;
         //获取用户信息
         let userInfo:any = Utils.getObject("userInfo");
 
         if(userInfo){
-            console.log("============="+JSON.stringify(userInfo));
             this.userImg = userInfo.headImgUrl;
             this.userName = userInfo.nickName;
         }
@@ -51,5 +53,16 @@ export class MainPage {
         }, function(){
             //取消
         });
+    }
+
+    showTitle(menuParent:string,menuName:string,refreshLink:string){
+        this.menuParent = menuParent;
+        this.menuName = menuName;
+        this.refreshLink = refreshLink;
+        this.router.navigate(['common/main/'+refreshLink]);
+    }
+
+    refreshPage(){
+        this.router.navigate();
     }
 }

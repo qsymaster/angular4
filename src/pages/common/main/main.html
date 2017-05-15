@@ -36,10 +36,10 @@
                     <i class="fa arrow"></i>
                 </a>
                 <ul aria-expanded="true">
-                    <li><a href="javascript:void(0);" routerLink="desktop/home">首页</a></li>
-                    <li><a href="javascript:void(0);" routerLink="desktop/goods">商品管理</a></li>
-                    <li><a href="javascript:void(0);" routerLink="desktop/order">订单管理</a></li>
-                    <li><a href="javascript:void(0);">账单管理</a></li>
+                    <li><a href="javascript:void(0);" (click)="showTitle('我的桌面','首页','desktop/home')">首页</a></li>
+                    <li><a href="javascript:void(0);" (click)="showTitle('我的桌面','商品管理','desktop/goods')">商品管理</a></li>
+                    <li><a href="javascript:void(0);" (click)="showTitle('我的桌面','订单管理','desktop/order')">订单管理</a></li>
+                    <li><a href="javascript:void(0);" (click)="showTitle('我的桌面','订单管理','desktop/order')">账单管理</a></li>
                 </ul>
             </li>
             <li>
@@ -67,7 +67,20 @@
 <section class="rightpanel">
     <!-- 显示导航信息 -->
     <nav class="navTitle">
-
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <i class="fa fa-home"> 位置：</i>
+                    <span> {{menuParent}}</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"> {{menuName}}</i>
+                </div>
+                <div class="col-md-6 text-right">
+                    <button type="button" class="btn btn-success btn-sm" name="button" (click)="refreshPage();">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </nav>
     <!-- 工作区域 -->
     <div class="articleWork">
