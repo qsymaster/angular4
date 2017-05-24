@@ -1,3 +1,61 @@
-<div class="container">
-    <h1>商品管理</h1>
+
+<!--搜索区域-->
+<div class="search-box">
+
+</div>
+
+<!--按钮区域-->
+<div class="button-box navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="javascript:;" ><span class="fa fa-plus-circle"></span> 新增</a></li>
+                <li><a href="javascript:;" ><span class="fa fa-pencil-square"></span> 修改</a></li>
+                <li><a href="javascript:;" ><span class="fa fa-times-circle"></span> 删除</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--数据显示区域-->
+<div class="table-box">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr class="active">
+                <th style="width:40px;"><input type="checkbox"/></th>
+                <th>商品编号</th>
+                <th>商品名称</th>
+                <th>门市价格</th>
+                <th>折扣价格</th>
+                <th>图片</th>
+                <th>类型</th>
+                <th>描述</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let g of lis">
+                <td><input type="checkbox"/></td>
+                <td>{{g.gid}}</td>
+                <td>{{g.gname}}</td>
+                <td>{{g.price}}</td>
+                <td>{{g.truePrice}}</td>
+                <td>{{g.pic}}</td>
+                <td>{{g.tname}}</td>
+                <td>{{g.dis}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!--分页区域-->
+<div class="pagination-box text-center">
+    <ul class="pagination">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
 </div>

@@ -24,7 +24,6 @@ export class LoginPage {
     }
 
     ngOnInit(){
-        $("body").addClass("loginBody");
         $("#loginName").focus();
     }
 

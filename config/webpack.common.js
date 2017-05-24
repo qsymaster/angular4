@@ -56,8 +56,8 @@ module.exports = {
   plugins: [
     //拷贝资源
     new CopyWebpackPlugin([{
-        from: helpers.root('web_modules/layer'),
-        to: ''
+        from: helpers.root('web_modules/layer/skin'),
+        to: 'skin'
     },{
         from: helpers.root('src/assets'),
         to: 'assets'

@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
 import {Utils} from "../../../providers/Utils";
 
 declare var $: any;
@@ -17,7 +17,7 @@ export class MainPage {
     menuParent = "我的桌面";
     menuName = "首页";
     refreshLink ='desktop/home';
-    constructor(private router:Router) {
+    constructor(private router:Router,private aroute:ActivatedRoute) {
         _router = router;
         //获取用户信息
         let userInfo:any = Utils.getObject("userInfo");
@@ -62,7 +62,4 @@ export class MainPage {
         this.router.navigate(['common/main/'+refreshLink]);
     }
 
-    refreshPage(){
-        this.router.navigate();
-    }
 }

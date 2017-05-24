@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.dev.js --progress",
-    "build": "webpack --config config/webpack.dev.js --progress --profile --bail",
+    "build": "webpack --config config/webpack.prod.js --progress --profile --bail",
     "webpack": "webpack",
     "rimraf": "rimraf"
   },
@@ -44,7 +44,7 @@
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "latest",
     "expose-loader": "latest",
-    "extract-text-webpack-plugin": "latest",
+    "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "latest",
     "html-loader": "latest",
     "html-webpack-plugin": "latest",
